@@ -4,10 +4,12 @@ import ProjectsSection from "@/components/ProjectsSection";
 import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import TestimonialsSection from "@/components/Testimonials"; // ✅ include this if needed
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation/>
       <HeroSection />
       <TechStackSection />
       <ProjectsSection />
