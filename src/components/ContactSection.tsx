@@ -1,63 +1,33 @@
-<<<<<<< HEAD
-import { useState } from "react";
-=======
 "use client";
-
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
->>>>>>> bb6b6d9 (main)
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-<<<<<<< HEAD
-=======
-import { number } from "framer-motion";
->>>>>>> bb6b6d9 (main)
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-<<<<<<< HEAD
-    project: "",
-    message: "",
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. I'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", project: "", message: "" });
-  };
-
-=======
     number: "",
     project: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
->>>>>>> bb6b6d9 (main)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-<<<<<<< HEAD
-=======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { name, email,number, project, message } = formData;
+    const { name, email, number, project, message } = formData;
 
     if (!name || !email || !message) {
       toast({ title: "Please fill out all required fields." });
@@ -66,20 +36,18 @@ const ContactSection = () => {
 
     setLoading(true);
 
-    const templateParams = {
-      from_name: name,
-      email,
-      number,
-      project,
-      message,
-    };
-
     try {
       await emailjs.send(
-        "service_q0ha99f",       // ✅ your service ID
-        "template_a0p3qg9",      // ✅ your template ID
-        templateParams,
-        "UYZwRWWhKgDx-eMI_"      // ✅ your public key
+        "service_q0ha99f",
+        "template_a0p3qg9",
+        {
+          from_name: name,
+          email,
+          number,
+          project,
+          message,
+        },
+        "UYZwRWWhKgDx-eMI_"
       );
 
       toast({
@@ -89,7 +57,6 @@ const ContactSection = () => {
 
       setFormData({ name: "", email: "", number: "", project: "", message: "" });
     } catch (error) {
-      console.error("EmailJS Error:", error);
       toast({
         title: "❌ Failed to send message",
         description: "Please try again later or contact me directly via email.",
@@ -100,7 +67,6 @@ const ContactSection = () => {
     }
   };
 
->>>>>>> bb6b6d9 (main)
   const contactInfo = [
     {
       icon: Mail,
@@ -116,12 +82,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Location",
-<<<<<<< HEAD
-      details: "Noida , India",
-      action: "#",
-=======
       details: "Noida, India",
->>>>>>> bb6b6d9 (main)
     },
   ];
 
@@ -133,8 +94,8 @@ const ContactSection = () => {
             Let's Work <span className="bg-hero-gradient bg-clip-text text-transparent">Together</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your project to life? Get in touch and let's discuss how I can help 
-            you achieve your goals with a stunning website or web application.
+            Ready to bring your project to life? Get in touch and let's discuss how I can help you
+            achieve your goals with a stunning website or web application.
           </p>
         </div>
 
@@ -162,9 +123,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-<<<<<<< HEAD
-=======
+                    <label htmlFor="number" className="block text-sm font-medium text-foreground mb-2">
                       Mobile Number
                     </label>
                     <Input
@@ -180,7 +139,6 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
->>>>>>> bb6b6d9 (main)
                       Email
                     </label>
                     <Input
@@ -195,7 +153,7 @@ const ContactSection = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="project" className="block text-sm font-medium text-foreground mb-2">
                     Project Type
@@ -226,11 +184,6 @@ const ContactSection = () => {
                   />
                 </div>
 
-<<<<<<< HEAD
-                <Button type="submit" size="lg" className="w-full bg-hero-gradient hover:opacity-90 shadow-elegant group">
-                  <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                  Send Message
-=======
                 <Button
                   type="submit"
                   size="lg"
@@ -239,18 +192,17 @@ const ContactSection = () => {
                 >
                   <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform" />
                   {loading ? "Sending..." : "Send Message"}
->>>>>>> bb6b6d9 (main)
                 </Button>
               </form>
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h3>
               <p className="text-muted-foreground mb-8">
-                I'm always excited to work on new projects and collaborate with amazing people. 
+                I'm always excited to work on new projects and collaborate with amazing people.
                 Whether you have a clear vision or just an idea, I'd love to hear from you.
               </p>
             </div>
@@ -294,8 +246,4 @@ const ContactSection = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ContactSection;
-=======
-export default ContactSection;
->>>>>>> bb6b6d9 (main)
