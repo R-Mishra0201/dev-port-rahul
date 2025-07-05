@@ -6,7 +6,7 @@ const PricingSection = () => {
   const packages = [
     {
       name: "Basic",
-      price: "$999",
+      price: "Rs.4000",
       period: "Starting from",
       description: "Perfect for small businesses and personal websites",
       features: [
@@ -16,12 +16,13 @@ const PricingSection = () => {
         "SEO Optimization",
         "Mobile Friendly",
         "1 Month Support",
+        "Price will be exceed as per requirement",
       ],
       popular: false,
     },
     {
       name: "Professional",
-      price: "$2,499",
+      price: "Rs.10,000",
       period: "Starting from",
       description: "Ideal for growing businesses with advanced needs",
       features: [
@@ -33,12 +34,13 @@ const PricingSection = () => {
         "3 Months Support",
         "Performance Optimization",
         "Social Media Integration",
+        "Price will be exceed as per requirement",
       ],
       popular: true,
     },
     {
       name: "Enterprise",
-      price: "$4,999",
+      price: "As per requirement & need",
       period: "Starting from",
       description: "For large businesses requiring custom solutions",
       features: [
