@@ -32,11 +32,7 @@ const Navigation = () => {
             className="flex-shrink-0"
           >
             <h1 className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-<<<<<<< HEAD
-              DevPortfolio
-=======
               WebbyRahul.com
->>>>>>> bb6b6d9 (main)
             </h1>
           </motion.div>
 
@@ -60,8 +56,8 @@ const Navigation = () => {
             </div>
           </div>
 
+          {/* Desktop Theme & CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Theme Toggle */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -73,14 +69,10 @@ const Navigation = () => {
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="w-9 h-9 rounded-full hover:bg-primary/10"
               >
-                {theme === "dark" ? (
-                  <Sun className="h-4 w-4 rotate-0 scale-100 transition-all" />
-                ) : (
-                  <Moon className="h-4 w-4 rotate-0 scale-100 transition-all" />
-                )}
+                {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </Button>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -96,22 +88,17 @@ const Navigation = () => {
             </motion.div>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Mobile Theme Toggle */}
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="w-9 h-9 rounded-full"
             >
-              {theme === "dark" ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
+              {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
-            
+
             <Button
               variant="ghost"
               size="sm"
@@ -145,6 +132,7 @@ const Navigation = () => {
                 {item.name}
               </motion.a>
             ))}
+
             <div className="pt-4">
               <Button 
                 variant="default" 
