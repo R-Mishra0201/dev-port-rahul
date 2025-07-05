@@ -1,15 +1,27 @@
+<<<<<<< HEAD
 import { useState } from "react";
+=======
+"use client";
+
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+>>>>>>> bb6b6d9 (main)
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+<<<<<<< HEAD
+=======
+import { number } from "framer-motion";
+>>>>>>> bb6b6d9 (main)
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+<<<<<<< HEAD
     project: "",
     message: "",
   });
@@ -24,6 +36,15 @@ const ContactSection = () => {
     setFormData({ name: "", email: "", project: "", message: "" });
   };
 
+=======
+    number: "",
+    project: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+
+>>>>>>> bb6b6d9 (main)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -31,6 +52,55 @@ const ContactSection = () => {
     });
   };
 
+<<<<<<< HEAD
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const { name, email,number, project, message } = formData;
+
+    if (!name || !email || !message) {
+      toast({ title: "Please fill out all required fields." });
+      return;
+    }
+
+    setLoading(true);
+
+    const templateParams = {
+      from_name: name,
+      email,
+      number,
+      project,
+      message,
+    };
+
+    try {
+      await emailjs.send(
+        "service_q0ha99f",       // ✅ your service ID
+        "template_a0p3qg9",      // ✅ your template ID
+        templateParams,
+        "UYZwRWWhKgDx-eMI_"      // ✅ your public key
+      );
+
+      toast({
+        title: "✅ Message Sent!",
+        description: "Thank you for your inquiry. I'll get back to you within 24 hours.",
+      });
+
+      setFormData({ name: "", email: "", number: "", project: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "❌ Failed to send message",
+        description: "Please try again later or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+>>>>>>> bb6b6d9 (main)
   const contactInfo = [
     {
       icon: Mail,
@@ -46,8 +116,12 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Location",
+<<<<<<< HEAD
       details: "Noida , India",
       action: "#",
+=======
+      details: "Noida, India",
+>>>>>>> bb6b6d9 (main)
     },
   ];
 
@@ -89,6 +163,24 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+<<<<<<< HEAD
+=======
+                      Mobile Number
+                    </label>
+                    <Input
+                      id="number"
+                      name="number"
+                      type="number"
+                      value={formData.number}
+                      onChange={handleChange}
+                      placeholder="+91 12345 67890"
+                      required
+                      className="bg-background border-border"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+>>>>>>> bb6b6d9 (main)
                       Email
                     </label>
                     <Input
@@ -134,9 +226,20 @@ const ContactSection = () => {
                   />
                 </div>
 
+<<<<<<< HEAD
                 <Button type="submit" size="lg" className="w-full bg-hero-gradient hover:opacity-90 shadow-elegant group">
                   <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform" />
                   Send Message
+=======
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={loading}
+                  className="w-full bg-hero-gradient hover:opacity-90 shadow-elegant group"
+                >
+                  <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform" />
+                  {loading ? "Sending..." : "Send Message"}
+>>>>>>> bb6b6d9 (main)
                 </Button>
               </form>
             </CardContent>
@@ -191,4 +294,8 @@ const ContactSection = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactSection;
+=======
+export default ContactSection;
+>>>>>>> bb6b6d9 (main)

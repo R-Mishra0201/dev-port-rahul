@@ -18,6 +18,7 @@ const TechStackSection = () => {
     {
       title: "Mobile",
       icon: Smartphone,
+<<<<<<< HEAD
       technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Expo", "Firebase"],
       color: "from-purple-500 to-pink-500",
     },
@@ -26,6 +27,16 @@ const TechStackSection = () => {
       icon: Cloud,
       technologies: ["AWS", "Docker", "Kubernetes", "CI/CD", "Linux", "Nginx"],
       color: "from-orange-500 to-red-500",
+=======
+      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Ionic", "Capacitor"],
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      technologies: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Terraform"],
+      color: "from-red-500 to-yellow-500",
+>>>>>>> bb6b6d9 (main)
     },
     {
       title: "Tools",
@@ -69,7 +80,11 @@ const TechStackSection = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+<<<<<<< HEAD
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+=======
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse animation-delay-2s"></div>
+>>>>>>> bb6b6d9 (main)
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
