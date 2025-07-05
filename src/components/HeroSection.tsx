@@ -35,6 +35,10 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <span className="bg-hero-gradient bg-clip-text text-transparent">
+              Rahul Mishra
+            </span>
+            <br />
+            <span className="bg-hero-gradient bg-clip-text text-transparent">
               Full-Stack
             </span>
             <br />
