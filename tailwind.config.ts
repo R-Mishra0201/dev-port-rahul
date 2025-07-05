@@ -67,10 +67,15 @@ export default {
 				'hero-gradient': 'var(--hero-gradient)',
 				'card-gradient': 'var(--card-gradient)',
 				'accent-gradient': 'var(--accent-gradient)',
+				'glass-gradient': 'var(--glass-gradient)',
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'card': 'var(--shadow-card)',
+				'glass': 'var(--shadow-glass)',
+			},
+			backdropBlur: {
+				'glass': '20px',
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
