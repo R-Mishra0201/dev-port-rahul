@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
-import project1 from "@/assets/project1.png";
+import project1 from "@/assets/Project1.png";
 import project2 from "@/assets/project2.png";
 
 const ProjectsSection = () => {
