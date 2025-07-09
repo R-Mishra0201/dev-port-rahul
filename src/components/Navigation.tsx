@@ -32,7 +32,7 @@ const Navigation = () => {
             className="flex-shrink-0"
           >
             <h1 className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              WebbyRahul.com
+              WebbyRahul
             </h1>
           </motion.div>
 
