@@ -9,12 +9,11 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern, responsive e-commerce website built with React and Node.js. Features include user authentication, payment integration, and admin dashboard.",
+      title: "SK Interior & Decorators",
+      description: "A modern, responsive Interior Designer website built with React and Node.js. Features include with Framer-motion Animation effects,Email Integerated Contact Form",
       image: project1,
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["React", "EmailJs", "Framer Motion"],
+      liveUrl: "https://srkinteriors.vercel.app",
     },
     {
       id: 2,
