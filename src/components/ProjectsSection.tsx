@@ -27,22 +27,12 @@ const ProjectsSection = () => {
       githubUrl: "#",
     },
     {
-      id: 3,
-      title: "Agriculture Business Website",
-      description:
-        "Mobile-first restaurant ordering application with real-time order tracking, payment processing, and customer management system.",
-      image: project3,
-      technologies: ["React Native", "Express", "PostgreSQL", "Socket.io"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
       id: 4,
-      title: "Services & Industrial Website",
+      title: "Coming Soon.....",
       description:
-        "Mobile-first restaurant ordering application with real-time order tracking, payment processing, and customer management system.",
+        "Creating a E-commerce project it will reflect very soon",
       image: project3,
-      technologies: ["React Native", "Express", "PostgreSQL", "Socket.io"],
+      technologies: [""],
       liveUrl: "#",
       githubUrl: "#",
     },
