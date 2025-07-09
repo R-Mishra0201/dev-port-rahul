@@ -28,7 +28,17 @@ const ProjectsSection = () => {
     },
     {
       id: 3,
-      title: "Restaurant App",
+      title: "Agriculture Business Website",
+      description:
+        "Mobile-first restaurant ordering application with real-time order tracking, payment processing, and customer management system.",
+      image: project3,
+      technologies: ["React Native", "Express", "PostgreSQL", "Socket.io"],
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      id: 4,
+      title: "Services & Industrial Website",
       description:
         "Mobile-first restaurant ordering application with real-time order tracking, payment processing, and customer management system.",
       image: project3,
