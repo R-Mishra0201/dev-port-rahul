@@ -18,12 +18,12 @@ const ProjectsSection = () => {
     },
     {
       id: 2,
-      title: "Analytics Dashboard",
+      title: "Personal Portfolio",
       description:
-        "Real-time analytics dashboard for business insights. Built with modern web technologies and featuring interactive charts and data visualization.",
+        "A modern, responsive portfolio website showcasing my projects, skills, and experience. Built with Vue.js, Firebase, and D3.js, it features interactive visuals, real-time updates, and a clean, user-friendly interface to provide an engaging overview of my work.",
       image: project2,
-      technologies: ["Vue.js", "D3.js", "Firebase", "Chart.js"],
-      liveUrl: "#",
+      technologies: ["Next.Js", "Email Js", "Dark Mode"],
+      liveUrl: "https://webbyrahul.vercel.app",
       githubUrl: "#",
     },
     {
