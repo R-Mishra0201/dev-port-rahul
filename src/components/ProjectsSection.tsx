@@ -89,10 +89,6 @@ const ProjectsSection = () => {
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Live Demo
                     </Button>
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
                   </div>
                 </div>
               </CardContent>
